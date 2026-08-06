@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fc2laxd.is-a.dev/sitemap.xml
