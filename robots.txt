@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fc2laxd.is-a.dev/sitemap.xml
+Sitemap: https://sakulayu-png.github.io/fc2laxd/sitemap.xml

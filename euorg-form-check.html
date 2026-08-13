@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>eu.org 表单检查</title>
+<style>
+  body { font-family: 'Microsoft YaHei', sans-serif; background: #f0f0f0; padding: 30px; }
+  .page { max-width: 780px; margin: 0 auto; background: #fff; border: 1px solid #ccc; padding: 30px; border-radius: 8px; position: relative; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .note { color: #555; font-size: 13px; margin-bottom: 20px; }
+  .field { margin-bottom: 14px; display: flex; align-items: center; }
+  .label { width: 150px; font-weight: bold; font-size: 14px; }
+  .box { border: 1px solid #aaa; border-radius: 3px; padding: 6px 10px; font-size: 14px; min-width: 300px; background: #fafafa; }
+  .section { font-weight: bold; font-size: 16px; margin: 22px 0 10px; border-top: 1px solid #ddd; padding-top: 14px; }
+  .ok { color: #1a7f37; font-weight: bold; font-size: 13px; margin-left: 10px; }
+  .bad { color: #d1242f; font-weight: bold; font-size: 13px; margin-left: 10px; }
+  .fix { color: #d1242f; font-size: 13px; }
+  .mark { display: inline-block; background: #d1242f; color: #fff; border-radius: 50%; width: 22px; height: 22px; text-align: center; line-height: 22px; font-size: 13px; font-weight: bold; margin-right: 8px; }
+  .redbox { border: 3px solid #d1242f !important; background: #fff5f5 !important; }
+  .greenbox { border: 2px solid #1a7f37 !important; }
+  .hint { background: #fff5f5; border: 1px solid #f5b5b5; padding: 10px 14px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+  .legend { margin: 16px 0; padding: 10px; background: #fafafa; border: 1px dashed #999; border-radius: 6px; font-size: 13px; }
+  .legend span { margin-right: 24px; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <h1>新域名请求 - 检查结果</h1>
+  <div class="note">红色 = 需要修改/填写，绿色 = 正确</div>
+
+  <div class="legend">
+    <span><span class="mark">1</span>必须填写</span>
+    <span><span class="mark">2</span>疑似拼写错误</span>
+    <span style="color:#1a7f37;">✓ 已正确</span>
+  </div>
+
+  <!-- 域名 -->
+  <div class="hint">
+    <span class="mark">1</span><b>完整域名 现在是空的！</b> 必须填 <b>fc2laxd.eu.org</b>（当前截图里这个框是空的，之前填的内容丢了，需要重新填）
+  </div>
+  <div class="field">
+    <div class="label">Complete domain name</div>
+    <div class="box redbox">（空）→ 填 fc2laxd.eu.org</div>
+    <span class="bad">✗ 必须填</span>
+  </div>
+
+  <div class="section">Organization 组织信息</div>
+  <div class="field"><div class="label">Name</div><div class="box greenbox">Shao siyu</div><span class="ok">✓</span></div>
+  <div class="field"><div class="label">Address 1-5</div><div class="box greenbox">1188 / 11881188 / ...</div><span class="ok">✓</span></div>
+  <div class="field"><div class="label">Country</div><div class="box greenbox">China</div><span class="ok">✓ 已改对</span></div>
+  <div class="field"><div class="label">Phone / Fax</div><div class="box">（可选，可留空）</div><span class="ok">✓ 可留空</span></div>
+  <div class="field"><div class="label">Private</div><div class="box greenbox">已勾选</div><span class="ok">✓</span></div>
+
+  <div class="section">Administrative / Technical contact</div>
+  <div class="field"><div class="label">Admin 联系人</div><div class="box greenbox">SS6053-FREE</div><span class="ok">✓</span></div>
+  <div class="field"><div class="label">Tech 联系人</div><div class="box greenbox">SS6053-FREE</div><span class="ok">✓</span></div>
+
+  <div class="section">Name servers 名称服务器</div>
+  <div class="hint">
+    <span class="mark">2</span><b>Name1 疑似拼写错误！</b> 你填的是 <b>cartoaa.ns.cloudflare.com</b>，但 Cloudflare 给的是 <b>carioca.ns.cloudflare.com</b>（注意是 c-a-r-i-o-c-a，不是 cartoaa）。请回 Cloudflare 核对复制，别手打。
+  </div>
+  <div class="field"><div class="label">Name1</div><div class="box redbox">cartoaa.ns.cloudflare.com ?</div><span class="bad">✗ 核对→应为 carioca</span></div>
+  <div class="field"><div class="label">Name2</div><div class="box greenbox">rex.ns.cloudflare.com</div><span class="ok">✓</span></div>
+  <div class="field"><div class="label">Name3-9 / IP1-9</div><div class="box">留空</div><span class="ok">✓ 不用填</span></div>
+  <div class="field"><div class="label">校验选项</div><div class="box greenbox">第3项(推荐)已选</div><span class="ok">✓</span></div>
+
+  <div class="hint" style="margin-top:24px;">
+    修改完 <b>1</b> 和 <b>2</b> 之后，点左下角蓝色 <b>Submit</b> 提交即可。之后等待 eu.org 人工审核（1-4 周），通过后域名生效。
+  </div>
+</div>
+
+</body>
+</html>
