@@ -60,6 +60,38 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "FC2 / LAXD 充值多久到账？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般付款后5-10分钟内到账，全天候在线接单，到账后可自行登录核对。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FC2 / LAXD 充值支持哪些付款方式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "支持支付宝、微信等人民币付款，无需海外信用卡，流程简单。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FC2 / LAXD 代充安全吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "长期稳定接单，先沟通确认再充值，有任何疑问都可以QQ 3278302101咨询。"
+      }
+    }
+  ]
+}
+</script>
 
 <style>
   :root {
@@ -175,6 +207,67 @@
     transition: color .2s;
   }
   .copy-hint.ok { color: #4ade80; font-weight: 600; }
+  /* 充值流程 */
+  .steps {
+    margin-top: 64px;
+    width: 100%;
+    max-width: 780px;
+  }
+  .steps h2, .faq h2 {
+    font-size: clamp(20px, 3.5vw, 26px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+  }
+  .steps h2::before, .faq h2::before {
+    content: "";
+    display: inline-block;
+    width: 8px; height: 20px;
+    background: linear-gradient(180deg, #ff2d3d, #ff7a45);
+    border-radius: 4px;
+    margin-right: 12px;
+    vertical-align: -2px;
+  }
+  .step-row {
+    display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  }
+  .step {
+    flex: 1 1 200px;
+    background: var(--card);
+    border: 1px solid #26262b;
+    border-radius: 12px;
+    padding: 22px 18px;
+    text-align: left;
+  }
+  .step .num {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: rgba(255,45,61,.15);
+    border: 1px solid rgba(255,45,61,.5);
+    color: #ff5a66;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+  }
+  .step b { display: block; font-size: 16px; margin-bottom: 6px; }
+  .step span { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  /* 常见问题 */
+  .faq {
+    margin-top: 52px;
+    width: 100%;
+    max-width: 780px;
+  }
+  .qa {
+    background: var(--card);
+    border: 1px solid #26262b;
+    border-left: 4px solid var(--red);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  .qa b { display: block; font-size: 15px; margin-bottom: 6px; }
+  .qa span { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
   footer {
     margin-top: 56px;
     font-size: 13px;
@@ -209,6 +302,43 @@
     </button>
     <div class="copy-hint" id="copyHint">复制 QQ 号后，打开 QQ 添加好友即可咨询</div>
   </div>
+
+  <section class="steps" aria-label="充值流程">
+    <h2>充值流程</h2>
+    <div class="step-row">
+      <div class="step">
+        <div class="num">1</div>
+        <b>添加 QQ</b>
+        <span>点击按钮复制 QQ 号 3278302101，添加好友</span>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <b>发送需求</b>
+        <span>告知要充值的平台（FC2 / LAXD）和金额</span>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <b>快速到账</b>
+        <span>人民币付款后极速充值到账，全程可沟通确认</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-label="常见问题">
+    <h2>常见问题</h2>
+    <div class="qa">
+      <b>FC2 / LAXD 充值多久到账？</b>
+      <span>一般付款后 5-10 分钟内到账，全天候在线接单，到账后可自行登录核对。</span>
+    </div>
+    <div class="qa">
+      <b>支持哪些付款方式？</b>
+      <span>支持支付宝、微信等人民币付款，无需海外信用卡，流程简单。</span>
+    </div>
+    <div class="qa">
+      <b>代充安全吗？</b>
+      <span>长期稳定接单，先沟通确认再充值，有任何疑问都可以 QQ 咨询。</span>
+    </div>
+  </section>
 
   <footer>© 2026 FC2 · LAXD 充值服务 · 仅供信息展示</footer>
 </div>
